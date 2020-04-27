@@ -7,13 +7,10 @@ class Emapanadas(db.Model):
     table_name__ = "emapanadas"
     empanadas_id = db.Column(db.Integer, primary_key=True)
     empanadas_nombre = db.Column(db.String(80), nullable=False)
-    empanadas_cantidad = db.Column(db.String(80), nullable=False)
-    empanadas_precio = db.Column(db.String(80), nullable=False)
+    empanadas_cantidad = db.Column(db.Integer, nullable=False)
+    empanadas_precio = db.Column(db.Float, nullable=False)
 
-    def __init__(self):
-        self.table_name__ = "cliente"
-        self.cliente_id = db.Column(db.Integer, primary_key = True)
-        self.cliente_nombre = db.Column(db.String(80),nullable = False)
-        self.cliente_direccion = db.Column(db.String(80),nullable = False)
-        self.cliente_telefono = db.Column(db.String(80),nullable = False)
-#        self.__tipo_datos = ['int', 'string', 'string', 'string']
+    def __init__(self, nombre, cantidad, precio):
+        self.empanadas_nombre = nombre
+        self.empanadas_cantidad = cantidad
+        self.empanadas_precio = precio
