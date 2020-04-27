@@ -1,5 +1,4 @@
-import sys
-sys.append('..')
+
 
 
 from run import db
