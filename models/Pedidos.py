@@ -1,15 +1,23 @@
-#from run import db
+import sys
+sys.append('..')
+
+
+from run import db
 
 
 class Pedidos(db.Model):
+    table_name__ = "pedido"
+    clienteid = db.Column(db.Integer, db.ForeignKey('clienteid', ondelete = 'CASCADE'), nullable = False))
+    pedidoid = db.Column(db.Integer, primary_key = True)
+    pedido_fecha = db.Column(db.DataTime, nullable = False)
+    pedido_fecha_entrega = db.Column(db.DataTime, nullable = False)
+    pedido_hora_entrega = db.Column(db.DataTime, nullable = False)
+    pedido_monto = db.Column(db.Float, nullable = False)
+    estadoid = db.Column(db.Integer, db.ForeignKey('estadoid', ondelete ='CASCADE'), nullable = False))
 
-
-    def __init__(self):
-        self.table_name__ = "pedido"
-        self.clienteid = db.Column(db.Integer,db.ForeignKey('clienteid', ondelete='CASCADE'), nullable=False))
-        self.pedidoid = db.Column(db.Integer, primary_key = True)
-        self.pedido_fecha = db.Column(db.DataTime, nullable = False)
-        self.pedido_fecha_entrega = db.Column(db.DataTime, nullable = False)
-        self.pedido_hora_entrega = horaentrega
+    def __init__(self,fecha,fechaentrega,fechahora,monto):
+        self.pedido_fecha = fecha
+        self.pedido_fecha_entrega = fechaentrega
+        self.pedido_hora_entrega = fechahora
         self.pedido_monto = monto
-        self.estadoid = db.Column(db.Integer,db.ForeignKey('estadoid', ondelete='CASCADE'), nullable=False))
+
