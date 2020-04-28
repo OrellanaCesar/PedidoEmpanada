@@ -13,10 +13,10 @@ class Empanadas(db.Model):
     detallepedido = db.relationship('DetallePedido', backref='empanadas', lazy=True)
 
 
-    def __init__(self, nombre, cantidad, precio):
-        self.empanadas_nombre = nombre
-        self.empanadas_cantidad = cantidad
-        self.empanadas_precio = precio
+    def __init__(self, data):
+        self.empanadas_nombre = data.get('empanadas_nombre')
+        self.empanadas_cantidad = data.get('empanadas_cantidad')
+        self.empanadas_precio = data.get('empanadas_precio')
 
 
     def save(self):

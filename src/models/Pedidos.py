@@ -14,11 +14,13 @@ class Pedidos(db.Model):
     estado_id = db.Column(db.Integer, db.ForeignKey('estado.estado_id', ondelete ='CASCADE'), nullable = False)
     detallepedido = db.relationship('DetallePedido', backref='pedidos', lazy=True)
 
-    def __init__(self,fecha,fechaentrega,fechahora,monto):
-        self.pedido_fecha = fecha
-        self.pedido_fecha_entrega = fechaentrega
-        self.pedido_hora_entrega = fechahora
-        self.pedido_monto = monto
+    def __init__(self,data):
+        self.cliente_id = data.get('cliente_id')
+        self.pedido_fecha = data.get('pedido_fecha')
+        self.pedido_fecha_entrega = data.get('pedido_fecha_entrega')
+        self.pedido_hora_entrega = data.get('pedido_hora_entrega')
+        self.pedido_monto = data.get('pedido_monto')
+        self.estado_id = data.get('estado_id')
 
     def save(self):
         db.session.add(self)

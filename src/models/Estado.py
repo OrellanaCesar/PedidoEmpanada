@@ -7,11 +7,11 @@ from marshmallow import fields, Schema
 class Estado(db.Model):
     __table_name__ = 'estado'
     estado_id = db.Column(db.Integer, primary_key = True)
-    estadonombre = db.Column(db.String(80), nullable = False)
-    cliente = db.relationship('Pedido', backref='estado', lazy=True)
+    estado_nombre = db.Column(db.String(80), nullable = False)
+    cliente = db.relationship('Pedidos', backref='estado', lazy=True)
 
-    def __init__(self,nombre):
-        self.estadonombre = nombre
+    def __init__(self,data):
+        self.estadonombre = data.get('estadonombre')
 
     def save(self):
         db.session.add(self)

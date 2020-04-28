@@ -8,7 +8,7 @@ class Cliente(db.Model):
     cliente_nombre = db.Column(db.String(80), nullable=False)
     cliente_direccion = db.Column(db.String(80), nullable=False)
     cliente_telefono = db.Column(db.String(80), nullable=False)
-    pedido = db.relationship('Pedido', backref='cliente', lazy=True)
+    pedido = db.relationship('Pedidos', backref='cliente', lazy=True)
 
     def __init__(self,data):
         self.cliente_nombre = data.get('cliente_nombre')
