@@ -1,7 +1,6 @@
-
-
-
 from . import db
+
+from marshmallow import fields, Schema
 
 
 class Estado(db.Model):
@@ -12,3 +11,24 @@ class Estado(db.Model):
 
     def __init__(self,nombre):
         self.estadonombre = nombre
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    @staticmethod
+    def get_all():
+        return Estado.query.all()
+
+    @staticmethod
+    def get_one_estado(id):
+        return Estado.query.get(id)
+
+
+class EstadoSchema(Schema):
+    estado_id = fields.Int(dump_only=True)
+    estadonombre = fields.Str(required=True)
