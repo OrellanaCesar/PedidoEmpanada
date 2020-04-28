@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/src/models/Empanadas.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="65" />
+              <caret line="46" column="65" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="65" />
               <folding>
                 <element signature="e#0#4#0" expanded="true" />
               </folding>
@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/models/DetallePedido.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
                 <element signature="e#1#17#0" expanded="true" />
               </folding>
@@ -101,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/models/Cliente.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="52" />
+              <caret line="41" column="52" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="52" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -144,9 +144,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="34" />
+    <option name="y" value="16" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -210,7 +210,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="16" width="1346" height="688" extended-state="0" />
+    <frame x="34" y="16" width="1346" height="688" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -318,7 +318,7 @@
     <entry file="file://$PROJECT_DIR$/src/models/DetallePedido.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="e#1#17#0" expanded="true" />
           </folding>
@@ -328,7 +328,7 @@
     <entry file="file://$PROJECT_DIR$/src/models/Cliente.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="52" />
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="52" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
@@ -338,7 +338,7 @@
     <entry file="file://$PROJECT_DIR$/src/models/Empanadas.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="65" />
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="65" />
           <folding>
             <element signature="e#0#4#0" expanded="true" />
           </folding>
