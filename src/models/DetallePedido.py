@@ -12,10 +12,12 @@ class DetallePedido(db.Model):
     detalle_total = db.Column(db.Float, nullable = False)
 
 
-    def __init__(self,cantidad,descripcion,total):
-        self.detalle_cantidad = cantidad
-        self.detalle_descripcion = descripcion
-        self.detalle_total = total
+    def __init__(self,data):
+        self.empanadas_id = data.get('empanadas_id')
+        self.pedido_id = data.get('pedidp_id')
+        self.detalle_cantidad = data.get('detalle_cantidad')
+        self.detalle_descripcion = data.get('detalle_descripcion')
+        self.detalle_total = data.get('detalle_total')
 
 
     def save(self):
