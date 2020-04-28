@@ -1,11 +1,11 @@
 
 
 
-from run import db
+from . import db
 
 
 class DetallePedido(db.Model):
-    table_name__ = "detallepedido"
+    __table_name__ = "detallepedido"
     detallepedido_id = db.Column(db.Integer, primary_key = True)
     empanadas_id = db.Column(db.Integer, db.ForeignKey('empanadas.empanadas_id', ondelete ='CASCADE'), nullable = False)
     pedido_id = db.Column(db.Integer, db.ForeignKey('pedidos.pedido_id', ondelete ='CASCADE'), nullable = False)

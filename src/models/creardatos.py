@@ -1,4 +1,4 @@
-from run import db
+from . import db
 
 from Estado import Estado
 from Empanadas import Empanadas

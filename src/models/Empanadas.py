@@ -1,9 +1,9 @@
 
-from run import db
+from . import db
 
 
 class Empanadas(db.Model):
-    table_name__ = 'empanadas'
+    __table_name__ = 'empanadas'
     empanadas_id = db.Column(db.Integer, primary_key=True)
     empanadas_nombre = db.Column(db.String(80), nullable=False)
     empanadas_cantidad = db.Column(db.Integer, nullable=False)

@@ -1,11 +1,11 @@
 
 
 
-from run import db
+from . import db
 
 
 class Estado(db.Model):
-    table_name__ = 'estado'
+    __table_name__ = 'estado'
     estado_id = db.Column(db.Integer, primary_key = True)
     estadonombre = db.Column(db.String(80), nullable = False)
 
