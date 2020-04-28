@@ -1,10 +1,10 @@
 
 
-from run import db
+from . import db
 
 
 class Pedidos(db.Model):
-    table_name__ = "pedidos"
+    __table_name__ = "pedidos"
     pedido_id = db.Column(db.Integer, primary_key=True)
     cliente_id = db.Column(db.Integer, db.ForeignKey('cliente.cliente_id', ondelete = 'CASCADE'), nullable = False)
     pedido_fecha = db.Column(db.DateTime, nullable = False)
