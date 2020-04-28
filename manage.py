@@ -5,9 +5,11 @@ from flask_migrate import Migrate, MigrateCommand
 from src.app import db, crear_app
 
 app = crear_app()
-migrate = Migrate(app=app, db=db)
-manager = Manager(app = app)
-manager.add_command('db',MigrateCommand)
+migrate = Migrate(app,db)
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
+
+from src.models import Cliente, Empanadas, Pedidos, Estado, DetallePedido
 
 if __name__ == '__main__':
     manager.run()
