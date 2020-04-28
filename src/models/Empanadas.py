@@ -1,4 +1,4 @@
-
+from .DetallePedido import DetallePedidoSchema
 from . import db
 from marshmallow import fields, Schema
 
@@ -10,6 +10,7 @@ class Empanadas(db.Model):
     empanadas_nombre = db.Column(db.String(80), nullable=False)
     empanadas_cantidad = db.Column(db.Integer, nullable=False)
     empanadas_precio = db.Column(db.Float, nullable=False)
+    detallepedido = db.relationship('DetallePedido', backref='empanadas', lazy=True)
 
 
     def __init__(self, nombre, cantidad, precio):
@@ -43,3 +44,4 @@ class EmpanadasSchema(Schema):
     empanadas_nombre = fields.Str(required=True)
     empanadas_cantidad = fields.Int(required=True)
     empanadas_precio = fields.Float(required=True)
+    detallepedido = fields.Nested(DetallePedidoSchema, many=True)

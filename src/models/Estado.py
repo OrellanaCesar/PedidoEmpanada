@@ -1,3 +1,4 @@
+from .Pedidos import PedidosSchema
 from . import db
 
 from marshmallow import fields, Schema
@@ -7,7 +8,7 @@ class Estado(db.Model):
     __table_name__ = 'estado'
     estado_id = db.Column(db.Integer, primary_key = True)
     estadonombre = db.Column(db.String(80), nullable = False)
-
+    cliente = db.relationship('Pedido', backref='estado', lazy=True)
 
     def __init__(self,nombre):
         self.estadonombre = nombre
@@ -32,3 +33,4 @@ class Estado(db.Model):
 class EstadoSchema(Schema):
     estado_id = fields.Int(dump_only=True)
     estadonombre = fields.Str(required=True)
+    cliente = fields.Nested(PedidosSchema, many=True)
