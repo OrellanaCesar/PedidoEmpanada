@@ -1,3 +1,4 @@
+from .DetallePedido import DetallePedidoSchema
 from . import db
 
 from marshmallow import fields, Schema
@@ -11,6 +12,7 @@ class Pedidos(db.Model):
     pedido_hora_entrega = db.Column(db.DateTime, nullable = False)
     pedido_monto = db.Column(db.Float, nullable = False)
     estado_id = db.Column(db.Integer, db.ForeignKey('estado.estado_id', ondelete ='CASCADE'), nullable = False)
+    detallepedido = db.relationship('DetallePedido', backref='pedidos', lazy=True)
 
     def __init__(self,fecha,fechaentrega,fechahora,monto):
         self.pedido_fecha = fecha
@@ -36,10 +38,6 @@ class Pedidos(db.Model):
 
 
 class PedidosSchema(Schema):
-    cliente_id = fields.Int(dumo_only=True)
-    cliente_nombre = fields.Str(required=True)
-    cliente_direccion = fields.Str(required=True)
-    cliente_telefono = fields.Str(required=True)
     pedido_id = fields.Int(dump_only=True)
     cliente_id = fields.Int(dump_only=True)
     pedido_fecha = fields.DateTime(dump_only=True)
@@ -47,3 +45,4 @@ class PedidosSchema(Schema):
     pedido_hora_entrega = fields.DateTime(dump_only=True)
     pedido_monto = fields.Float(required=True)
     estado_id = fields.Int(dumo_only=True)
+    detallepedido = fields.Nested(DetallePedidoSchema, many=True)
