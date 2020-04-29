@@ -35,7 +35,7 @@ class Pedidos(db.Model):
         return Pedidos.query.all()
 
     @staticmethod
-    def get_one_cliente(id):
+    def get_one_pedido(id):
         return Pedidos.query.get(id)
 
 
