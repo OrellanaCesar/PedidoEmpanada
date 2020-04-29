@@ -35,7 +35,7 @@ class Empanadas(db.Model):
 
 
     @staticmethod
-    def get_one_cliente(id):
+    def get_one_empanada(id):
         return Empanadas.query.get(id)
 
 

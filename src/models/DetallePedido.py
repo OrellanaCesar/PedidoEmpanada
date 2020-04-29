@@ -36,7 +36,7 @@ class DetallePedido(db.Model):
 
 
     @staticmethod
-    def get_one_cliente(id):
+    def get_one_detalle(id):
         return DetallePedido.query.get(id)
 
 
