@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, abort
 from .models import db
 from .views.EmpanadasView import empanadas_api as empanadas_blueprint
 from .views.ClienteView import cliente_api as cliente_blueprint
+from .views.EstadoView import estado_api as estado_blueprint
+from .views.PedidoView import pedido_api as pedido_blueprint
+from .views.DetallePedidoView import detalle_api as detalle_blueprint
 
 def crear_app():
     app = Flask(__name__)
@@ -11,8 +14,9 @@ def crear_app():
     db.init_app(app)
     app.register_blueprint(empanadas_blueprint, url_prefix='/api/v1/empanadas')
     app.register_blueprint(cliente_blueprint, url_prefix='/api/v1/clientes')
-
-
+    app.register_blueprint(estado_blueprint,url_prefix='/api/v1/estados')
+    app.register_blueprint(pedido_blueprint,url_prefix='/api/v1/pedidos')
+    app.register_blueprint(detalle_blueprint,url_prefix='/api/v1/detallepedido')
     @app.route("/",methods=['GET'])
     def index():
         return 'Felicidades sos el primer emdpoit trabajando'
