@@ -34,7 +34,7 @@ def get_all():
     return custom_response(ser_client,200)
 
 
-@cliente_api.route('/<int:clientes_sid>', methods=['GET'])
+@cliente_api.route('/<int:clientes_id>', methods=['GET'])
 def get_a_cliente(clientes_id):
     """
     """

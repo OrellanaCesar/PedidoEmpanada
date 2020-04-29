@@ -31,8 +31,8 @@ class DetallePedido(db.Model):
 
     
     @staticmethod
-    def get_all():
-        return DetallePedido.query.all()
+    def get_all(pedido_id):
+        return DetallePedido.query.filter(pedido_id=pedido_id).all()
 
 
     @staticmethod
