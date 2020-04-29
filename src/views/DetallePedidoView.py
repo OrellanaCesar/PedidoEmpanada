@@ -26,12 +26,12 @@ def create():
     return custom_response({'message':'Pedido Creado'},201)
 
 
-@detalle_api.route('/', methods=['GET'])
-def get_all():
+@detalle_api.route('/<int:pediddo_id>', methods=['GET'])
+def get_all(pedido_id):
     """
     Esta funcion devuelve todos los detalles de un pedido en formato json
     """
-    detalle = DetallePedido.get_all()
+    detalle = DetallePedido.get_all(pedido_id)
     ser_client = DetallePedidoSchema.dump(detalle, many=True)
     return custom_response(ser_client,200)
 
