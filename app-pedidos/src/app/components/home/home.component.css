@@ -1,0 +1,10 @@
+.imagen{
+	position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -100;
+    opacity: 0.80;
+    width: 100% !important;
+    height: 100% !important;
+
+}
