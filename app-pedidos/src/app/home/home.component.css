@@ -1,0 +1,49 @@
+.imagen{
+	position: static;
+    right: 0;
+    top: 0;
+    z-index: -100;
+    opacity: 1.70;
+    width: 100% !important;
+    height: 100% !important;
+
+}
+
+.textoimagen{
+	margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 900px;
+    text-align: center;
+}
+
+
+@media (max-width: 978px){
+	.textoimagen  {
+	    padding: 0 1rem;
+	    width: 100%!important;
+		}
+
+
+}
+
+@media (max-width: 400px){
+
+    .titulos{
+        font-family: Fantasy;
+        font-size: 40px;
+        color: #e4f4f9;
+        line-height: 1.7;
+    }
+}
+
+.titulos{
+	font-family: Fantasy;
+	font-size: 73px;
+	color: #e4f4f9;
+	line-height: 1.7;
+}

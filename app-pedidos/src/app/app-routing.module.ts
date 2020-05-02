@@ -8,10 +8,10 @@ export const Approutes: Routes = [
 		path: '',
 		component: FullComponent,
 		children: [
-			{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+			{ path: '', redirectTo: '/home', pathMatch: 'full' },
 			{
-				path: 'dashboard',
-				loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+				path: 'home',
+				loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
 			},
 			{
 				path: 'component',
@@ -21,6 +21,6 @@ export const Approutes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: '/dashboard'
+		redirectTo: '/home'
 	}
 ];

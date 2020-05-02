@@ -4,9 +4,10 @@ import { Component, AfterViewInit } from '@angular/core';
 declare var require: any;
 
 @Component({
-  templateUrl: './dashboard.component.html'
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class DashboardComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit {
   subtitle: string;
   constructor() {
     this.subtitle = 'This is some text within a card block.';
