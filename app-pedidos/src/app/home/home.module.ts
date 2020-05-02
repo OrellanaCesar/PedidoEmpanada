@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
-import { DashboardComponent } from './dashboard.component';
+import { HomeComponent } from './home.component';
 
 const routes: Routes = [
 	{
 		path: '',
 		data: {
-			title: 'Dashboard'
+			title: 'Home'
 		},
-		component: DashboardComponent
+		component: HomeComponent
 	}
 ];
 
 @NgModule({
 	imports: [FormsModule, CommonModule, RouterModule.forChild(routes), ChartsModule],
-	declarations: [DashboardComponent]
+	declarations: [HomeComponent]
 })
-export class DashboardModule {}
+export class HomeModule {}
