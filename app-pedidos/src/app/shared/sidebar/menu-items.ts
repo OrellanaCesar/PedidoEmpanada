@@ -10,7 +10,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/dashboard',
+    path: '/home',
     title: 'Home',
     icon: 'mdi mdi-gauge',
     class: '',
